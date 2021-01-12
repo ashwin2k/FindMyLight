@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Find My LIght- StreetLight Locations</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var center={lat: 12.984866	, lng: 80.213103};
+  var q={lat: 12.984965		, lng: 80.213254	};
+  var w={lat: 12.984683		, lng: 80.213304  };//notst
+ var e={lat: 12.984769		, lng: 80.213231};//notst
+  var r={lat: 12.984966	, lng: 80.213358};
+  var y={lat: 12.985060	, lng: 80.213255	};
+  var u={lat: 12.984802		, lng: 80.213338};
+  var a={lat: 12.984895	, lng: 80.213195	};
+  var t={lat: 12.985075, lng:80.212968	};
+  var m={lat:12.984973, lng:80.212901	};
+  var b={lat: 12.984904	, lng:80.212992		};
+  var p={lat:12.984989, lng:80.213035		};
+
+  var n={lat: 12.984996, lng:80.213135	};
+
+
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 20, center: center});
+  // The marker, positioned at Uluru
+//  var marker1 = new google.maps.Marker({position: center, map: map,icon:'ss.png'});
+ var marker2= new google.maps.Marker({position: q, map: map,icon:'ss.png'});
+  //var marker3 = new google.maps.Marker({position: w, map: map});
+
+  //var marker4 = new google.maps.Marker({position: e, map: map});
+
+  var marker5 = new google.maps.Marker({position: r, map: map,icon:'ss.png'});
+  var marker6 = new google.maps.Marker({position: t, map: map,icon:'ss.png'});
+  //var marker7 = new google.maps.Marker({position: y, map: map});
+  //var marker8 = new google.maps.Marker({position: u, map: map});
+  var marker9 = new google.maps.Marker({position: a, map: map,icon:'ss.png'});
+  var marker10 = new google.maps.Marker({position: m, map: map,icon:'ss.png'});
+  var marker11 = new google.maps.Marker({position: b, map: map,icon:'ss.png'});
+  //var marker12 = new google.maps.Marker({position: p, map: map});
+  //var marker13 = new google.maps.Marker({position: n, map: map});
+
+
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDELuXQ2Z6FfDVxmokghXirJmSZjkHuGOg&callback=initMap">
+    </script>
+  </body>
+</html>
